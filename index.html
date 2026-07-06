@@ -388,14 +388,16 @@
   /* ================= Impresión (PDF) ================= */
   @media print {
     body { background: #fff; font-size: 12px; }
-    header { padding: 30px 0 24px; }
-    section { padding: 24px 0; }
-    .capas { grid-template-columns: 1fr 1fr; gap: 16px; }
+    header { padding: 26px 0 20px; }
+    section { padding: 18px 0; }
+    h2 { font-size: 24px; }
+    .h2-intro { margin-bottom: 20px; }
+    .capas { grid-template-columns: 1fr 1fr; gap: 14px; }
     .capa, .muestra, .respaldo article, .pasos article, .extra article, .faq article { page-break-inside: avoid; }
     .capa, .marco, .cierre { box-shadow: none; }
-    .marco .ventana { height: 250px; }
-    .muestra { padding: 16px 0; gap: 22px; }
-    #muestras, #metodo { page-break-before: page; }
+    .marco .ventana { height: 215px; }
+    .muestra { padding: 12px 0; gap: 20px; }
+    #muestras { page-break-before: page; }
     .mk, .extra article, .cierre, .monograma, .franja, .mk-lateral .item.activo, .mk-boton, .mk-logo, .mk-grid span.hoy, .mk-grid span.evento, .mk-chip {
       -webkit-print-color-adjust: exact; print-color-adjust: exact;
     }
