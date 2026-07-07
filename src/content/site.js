@@ -181,7 +181,7 @@ export const dataScience = [
   {
     stat: "¿Cuánto se venderá?",
     title: "Predicción de demanda",
-    text: "Sistemas que pronostican las ventas para planificar inventario — más de 20.000 combinaciones de producto y tienda por cliente — combinando modelos estadísticos y de aprendizaje automático con selección automática.",
+    text: "Sistemas que pronostican las ventas para planificar inventario — más de 20.000 combinaciones de producto y tienda por cliente — combinando modelos estadísticos y de aprendizaje automático.",
   },
   {
     stat: "¿Qué comprar?",
