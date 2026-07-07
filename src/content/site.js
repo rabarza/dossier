@@ -73,7 +73,7 @@ export const services = [
       { label: "Tu marca, no una plantilla", scene: "whitelabel" },
       { label: "Componentes con versiones", scene: "variants" },
     ],
-    evidence: "Cada pieza de esta lista ya está construida y funcionando en el motor real; las ilustraciones muestran la idea sin amarrarla a una plantilla.",
+    evidence: "Cada pieza de esta lista ya está construida y funcionando; las ilustraciones solo muestran la idea, sin amarrarla a un diseño.",
   },
   {
     title: "Sitios institucionales y de figuras públicas",

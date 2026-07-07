@@ -182,7 +182,7 @@ function WhiteLabelScene() {
           <div className="m-mini-row"><i /><i /><i /></div>
         </div>
       </div>
-      <p className="m-caption">El mismo motor, vestido con la marca de cada cliente.</p>
+      <p className="m-caption">Cada tienda se diseña desde la identidad de su dueño — no hay dos iguales.</p>
     </div>
   );
 }
