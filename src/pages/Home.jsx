@@ -2,6 +2,7 @@ import MathDoodles from "../components/MathDoodles.jsx";
 import Marquee from "../components/Marquee.jsx";
 import ServiceCard from "../components/ServiceCard.jsx";
 import { MailIcon, WhatsAppIcon, GitHubIcon, LinkedInIcon } from "../components/Icons.jsx";
+import CopyEmailButton from "../components/CopyEmailButton.jsx";
 import {
   contact, navigation, hero, marqueeItems, whatIDo, services,
   dataScience, credentials, teaching, process, faqs,
@@ -179,7 +180,7 @@ export default function Home() {
           <p>Una reunión corta basta para mostrar todo esto funcionando.</p>
           <div>
             <a className="btn" href={contact.whatsapp}>Escríbeme por WhatsApp</a>
-            <a className="btn" href={`mailto:${contact.email}`}>{contact.email}</a>
+            <CopyEmailButton email={contact.email} />
           </div>
         </div>
       </div>
