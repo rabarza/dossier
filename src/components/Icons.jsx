@@ -23,8 +23,8 @@ export function MailIcon() {
 export function WhatsAppIcon() {
   return (
     <svg {...base}>
-      <path d="M12 3a9 9 0 1 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3z" />
-      <path d="M9 9.5c.5 2.5 3 5 5.5 5.5" />
+      <path d="M20 11.5a8 8 0 1 0-15 3.9L4 20l4.7-1.1a8 8 0 0 0 11.3-7.4z" />
+      <path d="M9.2 9.8c.4 2.2 2.4 4.2 4.6 4.6" />
     </svg>
   );
 }

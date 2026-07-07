@@ -202,14 +202,14 @@ export const credentials = [
     text: "Científico de datos e ingeniero en Datawalt: los sistemas de esta sección los usan a diario empresas de retail y distribución para operar.",
   },
   {
-    stat: "2 títulos",
-    title: "Formación en ingeniería y magíster",
-    text: "Ingeniería Civil Industrial e Ingeniería Civil Informática (UAI), y Magíster en Ingeniería Industrial e Investigación de Operaciones, aprobado con distinción máxima.",
+    stat: "2 ingenierías + magíster",
+    title: "Formación con distinción máxima",
+    text: "Ingeniería Civil Industrial e Ingeniería Civil Informática (UAI), y Magíster en Ingeniería Industrial e Investigación de Operaciones — tesis aprobada con nota 7,0.",
   },
   {
-    stat: "1er lugar",
-    title: "Premiado por calidad de ingeniería",
-    text: "Primer lugar a la mejor ingeniería en una competencia de inteligencia artificial organizada por Globant, empresa global de software (2023).",
+    stat: "Mejor ingeniería",
+    title: "Premio en el AI CodeFest de Globant",
+    text: "Premio al proyecto con mejor ingeniería en la hackatón de inteligencia artificial de Globant, empresa global de software (2023).",
   },
 ];
 
