@@ -38,7 +38,7 @@ export const whatIDo = [
   },
   {
     title: "Ciencia de datos y optimización",
-    text: "Sistemas que predicen demanda y optimizan decisiones de compra e inventario, en producción para empresas de retail y distribución.",
+    text: "Análisis, modelos predictivos y optimización aplicados al problema que tengas: convertir tus datos en decisiones, del prototipo a producción.",
     anchor: "#datos",
   },
   {

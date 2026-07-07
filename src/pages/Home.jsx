@@ -91,8 +91,9 @@ export default function Home() {
           <div className="section-head">
             <h2 className="section-title">Ciencia de datos y <mark>optimización</mark></h2>
             <p className="section-intro">
-              Mi trabajo diario: sistemas que empresas de retail y distribución usan
-              para decidir qué comprar, cuánto y cuándo.
+              Esto es lo que hago a diario como ingeniero: sistemas de predicción y
+              optimización que empresas reales usan para operar. Es la experiencia
+              que respalda todo lo demás.
             </p>
           </div>
           <div className="blocks">
