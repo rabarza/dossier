@@ -1,8 +1,8 @@
 // Fondo de garabatos matemáticos dibujados a mano (SVG propio).
 // Cada figura es un <g> independiente: mover, quitar o duplicar es trivial.
-export default function Garabatos() {
+export default function MathDoodles() {
   return (
-    <svg className="fondo-mate" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <svg className="doodles-bg" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
       <g fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" fontFamily="Caveat, cursive">
         <g transform="translate(70,50) rotate(-8)">
           <ellipse cx="70" cy="72" rx="67" ry="71" />
