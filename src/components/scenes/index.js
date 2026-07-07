@@ -2,7 +2,8 @@
 // nombre (`sceneSet`) y cada escena por clave, sin importar componentes.
 import ecommerce from "./EcommerceScenes.jsx";
 import portal from "./PortalScenes.jsx";
+import institutional from "./InstitutionalScenes.jsx";
 
-const sceneSets = { ecommerce, portal };
+const sceneSets = { ecommerce, portal, institutional };
 
 export default sceneSets;

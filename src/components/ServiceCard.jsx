@@ -31,6 +31,9 @@ export default function ServiceCard({ service, demoUrl }) {
               domain={service.showcaseDomain}
             />
             <p className="evidence">{service.evidence}</p>
+            {service.demo && (
+              <a className="chip-ink" href={demoUrl}>Probar la demo navegable →</a>
+            )}
           </div>
         </div>
       )}

@@ -334,6 +334,19 @@ section { padding: 64px 0; }
 }
 .m-phone-bar { height: 5px; width: 56px; background: var(--ink); border-radius: 3px; margin: 0 auto 2px; }
 .m-phone .m-thumb { height: 42px; }
+/* escenas institucionales: biografía, proyectos de ley, hitos */
+.m-bio { flex: 1; display: grid; gap: 8px; align-content: center; justify-items: center; text-align: center; }
+.m-avatar {
+  width: 74px; height: 74px; border-radius: 50%; border: 3px solid var(--ink);
+  background: repeating-linear-gradient(45deg, #f0ece0 0, #f0ece0 6px, #e2dccb 6px, #e2dccb 12px);
+}
+.m-panel.wide { min-width: 0; width: 100%; max-width: 420px; }
+.m-milestone { display: flex; align-items: center; gap: 10px; }
+.m-milestone .m-chip { flex: none; }
+.m-event { font-size: 12.5px; display: block; }
+.m-bill { display: flex; align-items: center; justify-content: space-between; gap: 12px; border-bottom: 1px dashed #ddd8ca; padding: 7px 0; }
+.m-bill .m-line { flex: 1; }
+.m-bill .m-chip { flex: none; }
 /* mini-tiendas (marca blanca) */
 .m-mini-store { border: 2px solid var(--ink); background: #fff; }
 .m-mini-header { font-family: var(--display); font-size: 11px; padding: 6px 10px; letter-spacing: 0.04em; }
