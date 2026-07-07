@@ -2,9 +2,6 @@
 // presentación. Crecer (blogs, nuevos servicios, charlas) es agregar datos.
 // Convención del proyecto: código e identificadores en inglés; textos
 // visibles, comentarios y documentación en español.
-import wiki from "../assets/wiki-page-desktop.jpg";
-import budgetPanel from "../assets/presupuesto-desktop.jpg";
-
 export const contact = {
   email: "rolo.abarza99@gmail.com",
   phone: "+56 9 4289 1663",
@@ -115,29 +112,36 @@ export const services = [
   },
   {
     title: "Blogs y sitios de contenido",
-    summary: "Publicar columnas, documentación o material educativo en un sitio rápido y ordenado.",
-    features: [
-      "Artículos con categorías, etiquetas y destacados",
-      "Modo claro y oscuro",
-      "Soporta fórmulas matemáticas y diagramas",
-      "Carga instantánea, incluso con internet lenta",
+    summary: "Publicar columnas, documentación o material educativo en un sitio rápido y ordenado. Recorre la lista y mira cada pieza.",
+    sceneSet: "blog",
+    showcaseDomain: "miblog.cl",
+    showcase: [
+      { label: "Editor tan simple como un correo", scene: "editor" },
+      { label: "Categorías, etiquetas y destacados", scene: "taxonomy" },
+      { label: "Buscador dentro del contenido", scene: "search" },
+      { label: "Modo claro y oscuro", scene: "darkmode" },
+      { label: "Fórmulas y diagramas de verdad", scene: "math" },
+      { label: "Suscripción para lectores", scene: "subscribe" },
+      { label: "Carga instantánea y buen posicionamiento", scene: "speed" },
     ],
-    images: [wiki],
-    alt: "Sitio de contenidos con menú lateral y artículos",
-    evidence: "La captura es de un sitio de contenidos propio, en uso.",
+    evidence: "Tengo uno propio en uso a diario — y este mismo sitio pronto publicará mi blog.",
   },
   {
     title: "Paneles de datos e indicadores",
-    summary: "Convertir datos en decisiones: tableros con gráficos que se actualizan solos.",
-    features: [
-      "Indicadores y gráficos a medida",
-      "Filtros por período y categoría",
-      "Alertas cuando algo se sale de rango",
-      "Útil para rendiciones, resultados o cifras de gestión",
+    summary: "Convertir datos en decisiones: tableros con gráficos que se actualizan solos. Recorre la lista y mira cada pieza.",
+    sceneSet: "dashboard",
+    showcaseDomain: "panelinterno.cl",
+    showcase: [
+      { label: "Indicadores clave de un vistazo", scene: "kpis" },
+      { label: "Gráficos que se actualizan solos", scene: "live" },
+      { label: "Filtros por período y categoría", scene: "filters" },
+      { label: "Alertas cuando algo se sale de rango", scene: "alerts" },
+      { label: "Detalle al hacer clic", scene: "drill" },
+      { label: "Exportar a Excel o PDF", scene: "export" },
+      { label: "Acceso por roles", scene: "roles" },
+      { label: "Conectado a tus fuentes de datos", scene: "sources" },
     ],
-    images: [budgetPanel],
-    alt: "Panel de control con gráficos y categorías",
-    evidence: "La captura es de una aplicación de finanzas propia, en uso.",
+    evidence: "Uso un panel propio a diario para mis finanzas, y construyo tableros de este tipo en mi trabajo con datos de empresas reales.",
   },
   {
     title: "Observatorio de datos",

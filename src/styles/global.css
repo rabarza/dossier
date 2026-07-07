@@ -377,6 +377,27 @@ section { padding: 64px 0; }
 .m-region.on { box-shadow: 3px 3px 0 var(--ink); }
 .m-legend { display: flex; align-items: center; gap: 8px; font-size: 11.5px; font-weight: 600; color: var(--gray); }
 .m-legend i { width: 16px; height: 12px; background: var(--orange); border: 2px solid var(--ink); flex: none; }
+/* escenas de panel y blog: tendencias, alertas, flujo, puntajes, fórmulas */
+.m-trend { font-weight: 700; }
+.m-trend.up { color: #2c7a4b; }
+.m-trend.down { color: var(--orange); }
+.m-bars i.warn { background: var(--orange); outline: 2px dashed var(--ink); outline-offset: 2px; }
+.m-alert {
+  border: 2px solid var(--ink); border-left: 6px solid var(--orange);
+  background: #fff3ee; font-size: 12px; font-weight: 700; padding: 8px 12px;
+}
+.m-flow { display: flex; align-items: center; gap: 16px; }
+.m-flow-sources { display: grid; gap: 8px; }
+.m-flow-arrow { font-family: var(--display); font-size: 26px; color: var(--orange); }
+.m-scores { display: flex; gap: 14px; justify-content: center; }
+.m-score {
+  width: 74px; height: 74px; border: 3px solid #2c7a4b; border-radius: 50%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px;
+  background: #f0f7f2;
+}
+.m-score b { font-family: var(--display); font-size: 16px; color: #2c7a4b; }
+.m-score span { font-size: 8.5px; font-weight: 700; text-transform: uppercase; color: var(--gray); }
+.m-formula { font-family: var(--hand); font-size: 26px; color: var(--ink); text-align: center; }
 /* mini-tiendas (marca blanca) */
 .m-mini-store { border: 2px solid var(--ink); background: #fff; }
 .m-mini-header { font-family: var(--display); font-size: 11px; padding: 6px 10px; letter-spacing: 0.04em; }
