@@ -20,10 +20,10 @@ export default function MathDoodles() {
           <path d="M14,96 C 50,78 120,38 152,20" />
           <text x="40" y="-6" fontSize="40" fill="currentColor" stroke="none">y = mx + b</text>
         </g>
-        {/* Ecuación de Bellman (valor óptimo) — guiño a la tesis de RL */}
-        <g transform="translate(880,55) rotate(5)">
-          <text x="0" y="40" fontSize="34" fill="currentColor" stroke="none">V(s) = max [ r + γ·V(s′) ]</text>
-          <path d="M-2,58 C 60,64 180,60 268,62" />
+        {/* Ecuación de Bellman (con esperanza) — guiño a la tesis de RL */}
+        <g transform="translate(825,140) rotate(4)">
+          <text x="0" y="40" fontSize="31" fill="currentColor" stroke="none">V(s) = max E[ r + γ·V(s′) ]</text>
+          <path d="M-2,56 C 60,62 200,58 320,60" />
         </g>
         <g transform="translate(620,250) rotate(4)">
           <path d="M2,6 C 60,2 120,4 166,0 C 170,56 168,110 172,162 C 110,166 54,164 6,168 C 2,112 6,60 2,6 Z" />
@@ -61,9 +61,9 @@ export default function MathDoodles() {
         <g transform="translate(575,545) rotate(-4)">
           <text x="0" y="40" fontSize="44" fill="currentColor" stroke="none">∫ f(x) dx</text>
         </g>
-        {/* Actualización de Q-learning — la otra cara de Bellman */}
-        <g transform="translate(170,625) rotate(-3)">
-          <text x="0" y="34" fontSize="30" fill="currentColor" stroke="none">Q(s,a) ← Q(s,a) + α·[ r + γ·max Q(s′,a′) − Q(s,a) ]</text>
+        {/* Actualización de Q-learning (sin esperanza: usa la muestra) */}
+        <g transform="translate(190,585) rotate(-3)">
+          <text x="0" y="30" fontSize="26" fill="currentColor" stroke="none">Q(s,a) ← Q(s,a) + α·[ r + γ·max Q(s′,a′) − Q(s,a) ]</text>
         </g>
         <g transform="translate(1030,560) rotate(6)">
           <text x="0" y="34" fontSize="36" fill="currentColor" stroke="none">
