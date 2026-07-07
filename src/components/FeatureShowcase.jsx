@@ -3,7 +3,7 @@ import { useState } from "react";
 // Escaparate interactivo: lista de funcionalidades a la izquierda; al pasar
 // el cursor (o tocar) una, la ventana de la derecha dibuja una mini-interfaz
 // esquemática de cómo se vería. `scenes` es un mapa clave → componente.
-export default function FeatureShowcase({ items, scenes }) {
+export default function FeatureShowcase({ items, scenes, domain = "ejemplo.cl" }) {
   const [active, setActive] = useState(0);
   const Scene = scenes[items[active].scene];
 
@@ -25,7 +25,7 @@ export default function FeatureShowcase({ items, scenes }) {
       </ul>
       <div className="showcase-stage">
         <div className="mock">
-          <div className="mock-bar"><i /><i /><i /><span>mitienda.cl</span></div>
+          <div className="mock-bar"><i /><i /><i /><span>{domain}</span></div>
           <div className="mock-body">
             <Scene />
           </div>

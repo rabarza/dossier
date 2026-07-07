@@ -2,7 +2,6 @@
 // presentación. Crecer (blogs, nuevos servicios, charlas) es agregar datos.
 // Convención del proyecto: código e identificadores en inglés; textos
 // visibles, comentarios y documentación en español.
-import realEstate from "../assets/realestate-home-desktop.jpg";
 import wiki from "../assets/wiki-page-desktop.jpg";
 import budgetPanel from "../assets/presupuesto-desktop.jpg";
 
@@ -62,6 +61,8 @@ export const services = [
   {
     title: "Ecommerce autoadministrable",
     summary: "Una tienda completa que el dueño administra desde el propio sitio, sin saber programar. Pasa el cursor por la lista y mira cada pieza.",
+    sceneSet: "ecommerce",
+    showcaseDomain: "mitienda.cl",
     showcase: [
       { label: "Se administra desde el propio sitio", scene: "admin" },
       { label: "Carrito y cuentas de clientes", scene: "cart" },
@@ -93,16 +94,20 @@ export const services = [
   },
   {
     title: "Portales con buscador",
-    summary: "Propiedades, vehículos, catálogos: cualquier inventario grande que la gente necesita filtrar.",
-    features: [
-      "Búsqueda con filtros combinados (ubicación, tipo, rango de precio)",
-      "Fichas de detalle con galería",
-      "Resultados con paginación y orden",
-      "Diseño que invita a explorar, adaptado a teléfono",
+    summary: "Propiedades, vehículos, catálogos: cualquier inventario grande que la gente necesita filtrar. Recorre la lista y mira cada pieza.",
+    sceneSet: "portal",
+    showcaseDomain: "portalpropiedades.cl",
+    showcase: [
+      { label: "Filtros combinados: comuna, tipo, precio", scene: "filters" },
+      { label: "Mapa con las propiedades", scene: "map" },
+      { label: "Ficha con galería de fotos", scene: "detail" },
+      { label: "Etiquetas: nueva, oportunidad, vendida", scene: "tags" },
+      { label: "Agendar visita desde la ficha", scene: "visit" },
+      { label: "Favoritos para comparar", scene: "favorites" },
+      { label: "Orden y paginación", scene: "sort" },
+      { label: "Pensado para el teléfono", scene: "mobile" },
     ],
-    images: [realEstate],
-    alt: "Portal de propiedades con buscador",
-    evidence: "La captura es de un portal inmobiliario construido como demostración.",
+    evidence: "Las piezas centrales están construidas en un portal de demostración; el resto es trabajo estándar de este tipo de proyecto.",
   },
   {
     title: "Blogs y sitios de contenido",

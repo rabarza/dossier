@@ -1,6 +1,6 @@
 import { useState } from "react";
 import FeatureShowcase from "./FeatureShowcase.jsx";
-import ecommerceScenes from "./scenes/EcommerceScenes.jsx";
+import sceneSets from "./scenes/index.js";
 
 // Ficha expandible de un servicio: cerrada muestra título y resumen; abierta,
 // las funcionalidades con evidencia. Si el servicio define `showcase`, en vez
@@ -25,7 +25,11 @@ export default function ServiceCard({ service, demoUrl }) {
       {open && service.showcase && (
         <div className="service-panel no-shots">
           <div>
-            <FeatureShowcase items={service.showcase} scenes={ecommerceScenes} />
+            <FeatureShowcase
+              items={service.showcase}
+              scenes={sceneSets[service.sceneSet]}
+              domain={service.showcaseDomain}
+            />
             <p className="evidence">{service.evidence}</p>
           </div>
         </div>

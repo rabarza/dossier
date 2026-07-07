@@ -291,6 +291,49 @@ section { padding: 64px 0; }
 .m-card.v-dark .m-thumb { border-color: #3a3d47; background: repeating-linear-gradient(45deg, #2a2d36 0, #2a2d36 6px, #232630 6px, #232630 12px); }
 .m-card.v-dark .m-line { background: #3a3d47; }
 .m-card.v-dark .m-price { color: #f2efe6; }
+/* escenas del portal: mapa, galería, comparador, paginador, teléfono */
+.m-specs { font-size: 11px; font-weight: 600; color: var(--gray-soft); }
+.m-flag {
+  position: absolute; top: 6px; left: 6px; background: var(--orange); color: #fff;
+  border: 2px solid var(--ink); font-size: 9.5px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.05em; padding: 1px 7px;
+}
+.m-flag.sold { background: var(--ink); }
+.m-map {
+  flex: 1; position: relative; border: 2px solid var(--ink); min-height: 200px;
+  background:
+    linear-gradient(rgba(20,20,20,0.08) 1.5px, transparent 1.5px),
+    linear-gradient(90deg, rgba(20,20,20,0.08) 1.5px, transparent 1.5px),
+    #eef0e4;
+  background-size: 34px 34px;
+}
+.m-pin {
+  position: absolute; background: #fff; border: 2px solid var(--ink);
+  box-shadow: 2px 2px 0 var(--ink); font-size: 10px; font-weight: 700; padding: 1px 7px;
+}
+.m-pin.on { background: var(--orange); color: #fff; }
+.m-gallery { flex: 1.2; display: grid; gap: 8px; align-content: start; }
+.m-thumb.big { height: 130px; }
+.m-gallery-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.m-gallery-strip .m-thumb.tiny { width: auto; height: 34px; }
+.m-comparebar {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  border: 2px solid var(--ink); background: #fff; padding: 8px 12px;
+  font-size: 12px; font-weight: 700;
+}
+.m-toolbar.between { justify-content: space-between; }
+.m-pager { display: flex; gap: 6px; justify-content: center; }
+.m-pager span {
+  min-width: 24px; text-align: center; border: 2px solid var(--ink); background: #fff;
+  font-size: 11px; font-weight: 700; padding: 2px 4px;
+}
+.m-pager span.on { background: var(--ink); color: #fff; }
+.m-phone {
+  width: 190px; border: 3px solid var(--ink); border-radius: 18px; background: #fff;
+  padding: 10px; display: grid; gap: 8px; box-shadow: 6px 6px 0 var(--orange);
+}
+.m-phone-bar { height: 5px; width: 56px; background: var(--ink); border-radius: 3px; margin: 0 auto 2px; }
+.m-phone .m-thumb { height: 42px; }
 /* mini-tiendas (marca blanca) */
 .m-mini-store { border: 2px solid var(--ink); background: #fff; }
 .m-mini-header { font-family: var(--display); font-size: 11px; padding: 6px 10px; letter-spacing: 0.04em; }
