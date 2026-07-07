@@ -246,7 +246,7 @@ export const process = [
 export const faqs = [
   {
     question: "¿Quién actualiza el sitio después de la entrega?",
-    answer: "El equipo de ustedes, desde un panel tan simple como escribir un correo. Incluyo capacitación y un manual breve. El dominio y todos sus datos son siempre de ustedes — y en desarrollos a medida, también el código. Sin amarras: si mañana quieren cambiar de proveedor, se van con todo lo suyo.",
+    answer: "El equipo de ustedes, desde un panel tan simple como escribir un correo. Incluyo capacitación y un manual breve. El dominio y todos sus datos son siempre de ustedes — sin amarras: si mañana cambian de proveedor, se van con lo suyo. Y si necesitan también la propiedad del código, se acuerda en el presupuesto.",
   },
   {
     question: "¿Cuánto demora y cuánto cuesta?",
