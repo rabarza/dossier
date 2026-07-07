@@ -92,8 +92,7 @@ export const services = [
       { label: "Buzón de iniciativas populares", scene: "initiatives" },
       { label: "Redes y sitios integrados", scene: "social" },
     ],
-    demo: true,
-    evidence: "Hay una demostración navegable completa, con formulario funcionando. Y un dato: de 28 sitios parlamentarios chilenos revisados en julio de 2026, más de la mitad estaba caído o desactualizado — un sitio bien mantenido es ventaja inmediata.",
+    evidence: "Un dato: de 28 sitios parlamentarios chilenos revisados en julio de 2026, más de la mitad está caído o desactualizado — un sitio bien mantenido es ventaja inmediata.",
   },
   {
     title: "Portales con buscador",
