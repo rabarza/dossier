@@ -447,6 +447,7 @@ section { padding: 64px 0; }
 
 /* buzón de iniciativas y utilidades */
 .m-vote { border: 2px solid var(--ink); background: #fff; font-size: 10.5px; font-weight: 700; padding: 2px 8px; white-space: nowrap; }
+.m-series { font-size: 12.5px; font-weight: 600; color: var(--ink); }
 .m-toolbar.center { justify-content: center; }
 
 /* grilla de turnos (plataformas de optimización) */

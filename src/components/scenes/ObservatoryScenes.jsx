@@ -154,11 +154,14 @@ function DownloadsScene() {
   return (
     <div className="m-scene m-center">
       <div className="m-panel wide">
-        <div className="m-panel-title">Datos abiertos</div>
-        <div className="m-bill"><div className="m-line" style={{ width: "58%" }} /><span className="m-chip orange">CSV</span></div>
-        <div className="m-bill"><div className="m-line" style={{ width: "64%" }} /><span className="m-chip orange">Excel</span></div>
-        <div className="m-bill"><div className="m-line" style={{ width: "48%" }} /><span className="m-chip ink">API</span></div>
-        <p className="m-caption">Cada serie se descarga tal cual, citable y actualizada.</p>
+        <div className="m-panel-title">Descarga las series</div>
+        <div className="m-bill"><span className="m-series">Participación laboral por región</span><span className="m-chip orange">↓ CSV</span></div>
+        <div className="m-bill"><span className="m-series">Brecha salarial 2010–2026</span><span className="m-chip orange">↓ Excel</span></div>
+        <div className="m-bill"><span className="m-series">Para sistemas: consulta automática</span><span className="m-chip ink">API</span></div>
+        <p className="m-caption">
+          Cualquiera puede descargar los datos detrás de los gráficos, citarlos y
+          reutilizarlos — esa transparencia es la que da autoridad.
+        </p>
       </div>
     </div>
   );

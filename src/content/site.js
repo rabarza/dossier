@@ -140,7 +140,7 @@ export const services = [
       { label: "Comparador entre regiones", scene: "compare" },
       { label: "Alertas cuando un indicador cruza el umbral", scene: "alerts" },
       { label: "Conectado a las fuentes de datos", scene: "sources" },
-      { label: "Datos abiertos: CSV, Excel, API", scene: "downloads" },
+      { label: "Datos abiertos: cualquiera descarga las series", scene: "downloads" },
       { label: "Informes y publicaciones", scene: "reports" },
       { label: "Normativas y políticas", scene: "policies" },
       { label: "Boletín del observatorio", scene: "newsletter" },
