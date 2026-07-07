@@ -32,14 +32,14 @@ export const marqueeItems = [
 
 export const whatIDo = [
   {
-    title: "Ciencia de datos y optimización",
-    text: "Sistemas que predicen demanda y optimizan decisiones de compra e inventario, en producción para empresas de retail y distribución.",
-    anchor: "#datos",
-  },
-  {
     title: "Desarrollo web y aplicaciones",
     text: "Ecommerce, portales, sitios institucionales, blogs y paneles — autoadministrables y hechos a medida, del diseño a la publicación.",
     anchor: "#construir",
+  },
+  {
+    title: "Ciencia de datos y optimización",
+    text: "Sistemas que predicen demanda y optimizan decisiones de compra e inventario, en producción para empresas de retail y distribución.",
+    anchor: "#datos",
   },
   {
     title: "Automatización e IA aplicada",
