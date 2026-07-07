@@ -1,0 +1,205 @@
+/* ============================================================
+   Sistema de diseño del sitio — dirección "neobrutalista naranja"
+   (ganadora del prototipo 2026-07-06: colores y héroe de la
+   sub-variante 2, cinta giratoria de la 1, resto de la 2).
+   ============================================================ */
+:root {
+  --papel: #fefdfb;
+  --tinta: #141414;
+  --naranja: #ff4d1c;
+  --nota: #fffef6;
+  --gris: #4d4b45;
+  --gris-suave: #8a877e;
+  --garabato: #b9b6ad;
+  --display: "Archivo Black", sans-serif;
+  --sans: "Space Grotesk", "Segoe UI", sans-serif;
+  --mano: "Caveat", cursive;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  background: var(--papel);
+  color: var(--tinta);
+  font-size: 17px;
+  line-height: 1.6;
+}
+img { max-width: 100%; display: block; }
+::selection { background: #ffd9cc; }
+
+.lienzo { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
+
+/* ---------- utilidades del lenguaje ---------- */
+.chip-borde {
+  display: inline-block; background: #fff; border: 2.5px solid var(--tinta);
+  box-shadow: 4px 4px 0 var(--tinta); padding: 5px 16px;
+  font-size: 13.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em;
+}
+.chip-tinta {
+  display: inline-block; background: var(--tinta); color: #fff;
+  font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
+  padding: 4px 12px;
+}
+.titulo-seccion {
+  font-family: var(--display);
+  font-size: clamp(30px, 4.6vw, 52px);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+}
+.titulo-seccion mark { background: var(--naranja); color: #fff; padding: 0 10px; }
+.intro-seccion { font-size: 17px; color: var(--gris); max-width: 44em; margin-top: 14px; }
+
+/* ---------- botones ---------- */
+.btn {
+  display: inline-block; border: 3px solid var(--tinta);
+  box-shadow: 6px 6px 0 var(--tinta); text-decoration: none;
+  font-weight: 700; font-size: 16px; padding: 14px 30px; color: var(--tinta);
+  background: #fff; cursor: pointer; font-family: var(--sans);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+.btn:hover { transform: translate(2px, 2px); box-shadow: 4px 4px 0 var(--tinta); }
+.btn.naranja { background: var(--naranja); color: #fff; }
+.btn + .btn { margin-left: 12px; }
+
+/* ---------- fondo de garabatos ---------- */
+.con-mate { position: relative; overflow: hidden; }
+.con-mate > *:not(.fondo-mate) { position: relative; z-index: 1; }
+.fondo-mate {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  pointer-events: none; z-index: 0; color: var(--garabato); opacity: 0.6;
+}
+
+/* ---------- héroe ---------- */
+.heroe { text-align: center; padding: 74px 0 56px; }
+.heroe h1 {
+  font-family: var(--display);
+  font-size: clamp(44px, 8vw, 96px);
+  line-height: 1; letter-spacing: -0.02em; text-transform: uppercase;
+  margin: 22px 0 0;
+}
+.heroe h1 mark {
+  background: var(--naranja); color: #fff; padding: 0 16px;
+  box-decoration-break: clone; -webkit-box-decoration-break: clone;
+}
+.heroe p { font-size: 19px; font-weight: 500; max-width: 32em; margin: 26px auto 30px; }
+.heroe .contactos { margin-top: 26px; font-size: 14.5px; font-weight: 600; color: var(--gris); }
+.heroe .contactos a { color: var(--tinta); }
+
+/* ---------- cinta marquee ---------- */
+.cinta {
+  background: var(--tinta); border-top: 3px solid var(--tinta); border-bottom: 3px solid var(--tinta);
+  overflow: hidden; white-space: nowrap;
+}
+.cinta .pista { display: inline-block; animation: cinta-rodar 24s linear infinite; padding: 9px 0; }
+.cinta span {
+  color: #fff; font-weight: 700; font-size: 15px;
+  text-transform: uppercase; letter-spacing: 0.06em; margin-right: 34px;
+}
+.cinta span:nth-child(even) { color: var(--naranja); }
+@keyframes cinta-rodar { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .cinta .pista { animation: none; } }
+
+/* ---------- secciones ---------- */
+section { padding: 64px 0; }
+.cabeza-seccion { margin-bottom: 36px; }
+
+/* ---------- notas con cinta adhesiva (capacidades / preguntas) ---------- */
+.notas { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; }
+.notas.dos { grid-template-columns: 1fr 1fr; }
+.nota {
+  background: var(--nota); border: 2.5px solid var(--tinta);
+  padding: 28px 20px 22px; position: relative;
+  box-shadow: 0 12px 24px rgba(20, 20, 20, 0.12);
+}
+.nota::before {
+  content: ""; position: absolute; top: -12px; left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+  width: 92px; height: 26px; background: rgba(255, 77, 28, 0.75);
+  border-left: 1px dashed rgba(20, 20, 20, 0.3);
+  border-right: 1px dashed rgba(20, 20, 20, 0.3);
+}
+.nota:nth-child(odd) { transform: rotate(-1deg); }
+.nota:nth-child(even) { transform: rotate(1.1deg); }
+.nota h3 { font-size: 17.5px; font-weight: 700; margin-bottom: 7px; }
+.nota p { font-size: 14px; color: var(--gris); }
+.nota .extra { margin-top: 12px; }
+
+/* ---------- marcos de proyecto ---------- */
+.obra { display: grid; grid-template-columns: 1fr 1.25fr; gap: 40px; align-items: center; padding: 34px 0; }
+.obra + .obra { border-top: 2.5px dashed #ddd8ca; }
+.obra:nth-of-type(even) { grid-template-columns: 1.25fr 1fr; }
+.obra:nth-of-type(even) .marco { order: -1; }
+.marco {
+  border: 3px solid var(--tinta); box-shadow: 12px 12px 0 var(--naranja);
+  transform: rotate(1deg); background: #fff; overflow: hidden;
+}
+.obra:nth-of-type(even) .marco { transform: rotate(-1deg); }
+.marco img { width: 100%; height: 340px; object-fit: cover; object-position: top; }
+.obra h3 { font-family: var(--display); font-size: 24px; text-transform: uppercase; margin: 12px 0 10px; line-height: 1.15; }
+.obra p { font-size: 15.5px; color: var(--gris); }
+.obra .detalle { font-size: 13.5px; color: var(--gris-suave); margin-top: 10px; }
+
+/* ---------- bloques sólidos (además / respaldo / método) ---------- */
+.bloques { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.bloque {
+  background: #fff; border: 2.5px solid var(--tinta);
+  box-shadow: 7px 7px 0 var(--tinta); padding: 24px 22px;
+}
+.bloque .dato { font-family: var(--display); font-size: 26px; color: var(--naranja); display: block; margin-bottom: 10px; }
+.bloque h3 { font-size: 16.5px; font-weight: 700; margin-bottom: 7px; }
+.bloque p { font-size: 14px; color: var(--gris); }
+
+.pasos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; counter-reset: paso; }
+.paso { background: #fff; border: 2.5px solid var(--tinta); padding: 22px 20px; position: relative; }
+.paso::before {
+  counter-increment: paso; content: "0" counter(paso);
+  font-family: var(--display); font-size: 24px; color: var(--naranja);
+  display: block; margin-bottom: 10px;
+}
+.paso h3 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+.paso p { font-size: 13.5px; color: var(--gris); }
+
+/* ---------- cierre ---------- */
+.cierre-envoltura { text-align: center; padding: 20px 0 84px; }
+.cierre {
+  background: var(--naranja); border: 3px solid var(--tinta);
+  box-shadow: 10px 10px 0 var(--tinta); color: #fff;
+  display: inline-block; padding: 44px 64px; transform: rotate(-1deg);
+}
+.cierre h2 { font-family: var(--display); font-size: clamp(28px, 4.6vw, 48px); text-transform: uppercase; }
+.cierre p { margin: 10px 0 22px; font-weight: 500; }
+.cierre .btn { background: #fff; color: var(--tinta); box-shadow: 6px 6px 0 rgba(20,20,20,0.55); }
+
+footer { text-align: center; padding: 0 24px 44px; font-size: 13.5px; color: var(--gris-suave); }
+
+/* ---------- móvil ---------- */
+@media (max-width: 860px) {
+  .notas { grid-template-columns: 1fr 1fr; gap: 22px; }
+  .notas.dos { grid-template-columns: 1fr; }
+  .bloques { grid-template-columns: 1fr; }
+  .pasos { grid-template-columns: 1fr 1fr; }
+  .obra, .obra:nth-of-type(even) { grid-template-columns: 1fr; gap: 18px; }
+  .obra:nth-of-type(even) .marco { order: 0; }
+  .marco img { height: 230px; }
+  .cierre { padding: 34px 26px; }
+  .btn + .btn { margin-left: 0; margin-top: 12px; }
+}
+@media (max-width: 520px) {
+  .notas, .pasos { grid-template-columns: 1fr; }
+}
+
+/* ---------- impresión (exportar a PDF) ---------- */
+@media print {
+  body { font-size: 12px; }
+  section { padding: 22px 0; }
+  .cinta, .fondo-mate { display: none; }
+  .nota, .bloque, .paso, .obra, .cierre { page-break-inside: avoid; box-shadow: none; }
+  .marco { box-shadow: 6px 6px 0 var(--naranja); }
+  .marco img { height: 240px; }
+  .heroe { padding: 30px 0 20px; }
+  .heroe h1 mark, .cierre, .chip-tinta, .titulo-seccion mark {
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+}
