@@ -1,6 +1,7 @@
 import MathDoodles from "../components/MathDoodles.jsx";
 import Marquee from "../components/Marquee.jsx";
 import ServiceCard from "../components/ServiceCard.jsx";
+import { MailIcon, WhatsAppIcon, GitHubIcon, LinkedInIcon } from "../components/Icons.jsx";
 import {
   contact, navigation, hero, marqueeItems, whatIDo, services,
   dataScience, credentials, teaching, process, faqs,
@@ -31,17 +32,14 @@ export default function Home() {
           <span className="chip-outline">{hero.chip}</span>
           <p>{hero.paragraph}</p>
           <div>
-            <a className="btn orange" href="#que-hago">Qué hago</a>
-            <a className="btn" href={`mailto:${contact.email}`}>Escríbeme</a>
+            <a className="btn orange" href="#que-hago">En qué te puedo ayudar</a>
+            <a className="btn" href={contact.whatsapp}>Escríbeme por WhatsApp</a>
           </div>
           <p className="contact-line">
-            <a href={`mailto:${contact.email}`}>{contact.email}</a>
-            {" · "}
-            <a href={contact.phoneHref}>{contact.phone}</a>
-            {" · "}
-            <a href={contact.github}>github.com/rabarza</a>
-            {" · "}
-            <a href={contact.linkedin}>LinkedIn</a>
+            <a className="contact-item" href={`mailto:${contact.email}`}><MailIcon /> {contact.email}</a>
+            <a className="contact-item" href={contact.whatsapp}><WhatsAppIcon /> {contact.phone}</a>
+            <a className="contact-item" href={contact.github}><GitHubIcon /> rabarza</a>
+            <a className="contact-item" href={contact.linkedin}><LinkedInIcon /> LinkedIn</a>
           </p>
         </header>
       </div>
@@ -52,7 +50,7 @@ export default function Home() {
       <section id="que-hago">
         <div className="container">
           <div className="section-head">
-            <h2 className="section-title">Qué <mark>hago</mark></h2>
+            <h2 className="section-title">En qué te puedo <mark>ayudar</mark></h2>
           </div>
           <div className="blocks four">
             {whatIDo.map((item) => (
@@ -125,7 +123,7 @@ export default function Home() {
             <p className="section-intro">{teaching.text}</p>
             <a
               className="btn orange"
-              href={`mailto:${contact.email}?subject=Tutorías`}
+              href={`${contact.whatsapp.split("?")[0]}?text=${encodeURIComponent("Hola Rolando, quiero consultar por clases particulares")}`}
               style={{ marginTop: 18, display: "inline-block" }}
             >
               Consultar por clases
@@ -179,7 +177,10 @@ export default function Home() {
         <div className="closing">
           <h2>¿Conversamos?</h2>
           <p>Una reunión corta basta para mostrar todo esto funcionando.</p>
-          <a className="btn" href={`mailto:${contact.email}`}>{contact.email}</a>
+          <div>
+            <a className="btn" href={contact.whatsapp}>Escríbeme por WhatsApp</a>
+            <a className="btn" href={`mailto:${contact.email}`}>{contact.email}</a>
+          </div>
         </div>
       </div>
 

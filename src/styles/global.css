@@ -108,8 +108,13 @@ section { padding: 64px 0; }
   margin-bottom: 24px;
 }
 .hero p { font-size: 18.5px; font-weight: 500; max-width: 36em; margin: 24px auto 30px; }
-.hero .contact-line { margin-top: 26px; font-size: 14.5px; font-weight: 600; color: var(--gray); }
-.hero .contact-line a { color: var(--ink); }
+.hero .contact-line {
+  margin-top: 26px; font-size: 14.5px; font-weight: 600; color: var(--gray);
+  display: flex; gap: 10px 22px; justify-content: center; flex-wrap: wrap;
+}
+.contact-item { display: inline-flex; align-items: center; gap: 7px; color: var(--ink); text-decoration: none; border-bottom: 2px solid transparent; }
+.contact-item:hover { border-bottom-color: var(--orange); }
+.contact-item svg { flex: none; }
 
 /* ---------- cinta marquee ---------- */
 .marquee {

@@ -5,14 +5,14 @@
 export const contact = {
   email: "rolo.abarza99@gmail.com",
   phone: "+56 9 4289 1663",
-  phoneHref: "tel:+56942891663",
+  whatsapp: "https://wa.me/56942891663?text=Hola%20Rolando%2C%20vi%20tu%20sitio%20web%20y%20me%20gustar%C3%ADa%20conversar",
   linkedin: "https://www.linkedin.com/in/rabarza/",
   github: "https://github.com/rabarza",
   city: "Santiago, Chile",
 };
 
 export const navigation = [
-  { label: "Qué hago", anchor: "#que-hago" },
+  { label: "En qué ayudo", anchor: "#que-hago" },
   { label: "Podemos construir", anchor: "#construir" },
   { label: "Datos", anchor: "#datos" },
   { label: "Docencia", anchor: "#docencia" },
@@ -179,9 +179,9 @@ export const services = [
 // ---------- Ciencia de datos y optimización (trabajo profesional) ----------
 export const dataScience = [
   {
-    stat: "20.000+",
+    stat: "¿Cuánto se venderá?",
     title: "Predicción de demanda",
-    text: "Sistemas que pronostican las ventas de miles de combinaciones producto-tienda para planificar inventario, combinando modelos estadísticos y de aprendizaje automático con selección automática.",
+    text: "Sistemas que pronostican las ventas para planificar inventario — más de 20.000 combinaciones de producto y tienda por cliente — combinando modelos estadísticos y de aprendizaje automático con selección automática.",
   },
   {
     stat: "¿Qué comprar?",
@@ -246,7 +246,7 @@ export const process = [
 export const faqs = [
   {
     question: "¿Quién actualiza el sitio después de la entrega?",
-    answer: "El equipo de ustedes, desde un panel tan simple como escribir un correo. Incluyo capacitación y un manual breve. El sitio y el dominio quedan en cuentas de ustedes — sin amarras conmigo.",
+    answer: "El equipo de ustedes, desde un panel tan simple como escribir un correo. Incluyo capacitación y un manual breve. El sitio, el dominio y el código fuente quedan en cuentas de ustedes — sin amarras: si mañana quieren seguir con otra persona, pueden.",
   },
   {
     question: "¿Cuánto demora y cuánto cuesta?",
