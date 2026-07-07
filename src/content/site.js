@@ -13,7 +13,7 @@ export const contact = {
 
 export const navigation = [
   { label: "Qué hago", anchor: "#que-hago" },
-  { label: "Puedo construir", anchor: "#construir" },
+  { label: "Podemos construir", anchor: "#construir" },
   { label: "Datos", anchor: "#datos" },
   { label: "Docencia", anchor: "#docencia" },
   { label: "Contacto", anchor: "#contacto" },
