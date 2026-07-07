@@ -3,7 +3,8 @@
 import ecommerce from "./EcommerceScenes.jsx";
 import portal from "./PortalScenes.jsx";
 import institutional from "./InstitutionalScenes.jsx";
+import observatory from "./ObservatoryScenes.jsx";
 
-const sceneSets = { ecommerce, portal, institutional };
+const sceneSets = { ecommerce, portal, institutional, observatory };
 
 export default sceneSets;

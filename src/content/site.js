@@ -140,6 +140,24 @@ export const services = [
     evidence: "La captura es de una aplicación de finanzas propia, en uso.",
   },
   {
+    title: "Observatorio de datos",
+    summary: "Para fundaciones, universidades y políticas públicas: indicadores vivos, mapas y publicaciones en un solo lugar. Recorre la lista y mira cada pieza.",
+    sceneSet: "observatory",
+    showcaseDomain: "observatorioejemplo.cl",
+    showcase: [
+      { label: "Ejes temáticos con sus indicadores", scene: "themes" },
+      { label: "Indicadores destacados y comparados", scene: "indicators" },
+      { label: "Gráficos interactivos", scene: "charts" },
+      { label: "Mapa por región", scene: "map" },
+      { label: "Comparador entre regiones", scene: "compare" },
+      { label: "Datos abiertos: CSV, Excel, API", scene: "downloads" },
+      { label: "Informes y publicaciones", scene: "reports" },
+      { label: "Normativas y políticas", scene: "policies" },
+      { label: "Boletín del observatorio", scene: "newsletter" },
+    ],
+    evidence: "Formato tomado de observatorios reales (OIG-CEPAL, OCEC-UDP, ComunidadMujer) — y por dentro, la misma ingeniería de datos que construyo a diario para empresas.",
+  },
+  {
     title: "APIs y sistemas a medida",
     summary: "El motor detrás de las aplicaciones: servicios que procesan datos y toman decisiones.",
     features: [
