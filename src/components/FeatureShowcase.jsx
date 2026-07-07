@@ -2,10 +2,19 @@ import { useState } from "react";
 
 // Escaparate interactivo: lista de funcionalidades a la izquierda; al pasar
 // el cursor (o tocar) una, la ventana de la derecha dibuja una mini-interfaz
-// esquemática de cómo se vería. `scenes` es un mapa clave → componente.
+// esquemática. Un ítem puede declarar varias versiones de diseño
+// (`scenes: [...]`): aparece el selector ‹ 1/2 › al pie de la ventana.
 export default function FeatureShowcase({ items, scenes, domain = "ejemplo.cl" }) {
   const [active, setActive] = useState(0);
-  const Scene = scenes[items[active].scene];
+  const [variant, setVariant] = useState(0);
+
+  const select = (i) => {
+    setActive(i);
+    setVariant(0);
+  };
+
+  const keys = items[active].scenes ?? [items[active].scene];
+  const Scene = scenes[keys[Math.min(variant, keys.length - 1)]];
 
   return (
     <div className="showcase">
@@ -14,9 +23,9 @@ export default function FeatureShowcase({ items, scenes, domain = "ejemplo.cl" }
           <li key={item.label}>
             <button
               className={i === active ? "active" : ""}
-              onMouseEnter={() => setActive(i)}
-              onFocus={() => setActive(i)}
-              onClick={() => setActive(i)}
+              onMouseEnter={() => select(i)}
+              onFocus={() => select(i)}
+              onClick={() => select(i)}
             >
               {item.label}
             </button>
@@ -29,6 +38,23 @@ export default function FeatureShowcase({ items, scenes, domain = "ejemplo.cl" }
           <div className="mock-body">
             <Scene />
           </div>
+          {keys.length > 1 && (
+            <div className="mock-variants">
+              <button
+                aria-label="Versión anterior"
+                onClick={() => setVariant((variant - 1 + keys.length) % keys.length)}
+              >
+                ‹
+              </button>
+              <span>versión {Math.min(variant, keys.length - 1) + 1} de {keys.length}</span>
+              <button
+                aria-label="Versión siguiente"
+                onClick={() => setVariant((variant + 1) % keys.length)}
+              >
+                ›
+              </button>
+            </div>
+          )}
         </div>
         <p className="showcase-hint">
           Ilustraciones esquemáticas: muestran la idea — el diseño final se hace

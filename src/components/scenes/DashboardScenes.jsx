@@ -1,14 +1,47 @@
-// Mini-escenas esquemáticas del panel de datos e indicadores.
+// Mini-escenas esquemáticas del panel de datos e indicadores. Los números
+// cuentan hacia arriba al aparecer (CountUp) para que la métrica "viva".
+import CountUp from "../CountUp.jsx";
 
 function KpisScene() {
   return (
     <div className="m-scene">
       <div className="m-grid">
-        <div className="m-stat-tile"><b>$38,4M</b><div className="m-specs">ventas del mes <span className="m-trend up">↑ 12%</span></div></div>
-        <div className="m-stat-tile"><b>1.842</b><div className="m-specs">pedidos <span className="m-trend up">↑ 6%</span></div></div>
-        <div className="m-stat-tile"><b>3,1%</b><div className="m-specs">devoluciones <span className="m-trend down">↓ 0,8%</span></div></div>
+        <div className="m-stat-tile"><b><CountUp to={38.4} decimals={1} prefix="$" suffix="M" /></b><div className="m-specs">ventas del mes <span className="m-trend up">↑ 12%</span></div></div>
+        <div className="m-stat-tile"><b><CountUp to={1842} /></b><div className="m-specs">pedidos <span className="m-trend up">↑ 6%</span></div></div>
+        <div className="m-stat-tile"><b><CountUp to={3.1} decimals={1} suffix="%" /></b><div className="m-specs">devoluciones <span className="m-trend down">↓ 0,8%</span></div></div>
       </div>
-      <p className="m-caption">Lo importante primero: cifras grandes, con su tendencia.</p>
+      <p className="m-caption">Lo importante primero: cifras grandes que se actualizan solas.</p>
+    </div>
+  );
+}
+
+function KpisBarsScene() {
+  return (
+    <div className="m-scene m-center">
+      <div className="m-panel wide">
+        <div className="m-panel-title">Los mismos indicadores, en barras</div>
+        <div className="m-compare-row"><span className="m-specs">Ventas</span><div className="m-hbar"><i style={{ width: "78%" }} /></div><b className="m-figure"><CountUp to={38.4} decimals={1} prefix="$" suffix="M" /></b></div>
+        <div className="m-compare-row"><span className="m-specs">Pedidos</span><div className="m-hbar"><i style={{ width: "62%" }} /></div><b className="m-figure"><CountUp to={1842} /></b></div>
+        <div className="m-compare-row"><span className="m-specs">Devol.</span><div className="m-hbar"><i style={{ width: "9%" }} className="alt" /></div><b className="m-figure"><CountUp to={3.1} decimals={1} suffix="%" /></b></div>
+        <p className="m-caption">Otro patrón de diseño para el mismo dato — se elige el que le calce al equipo.</p>
+      </div>
+    </div>
+  );
+}
+
+function TrendLineScene() {
+  return (
+    <div className="m-scene m-center">
+      <div className="m-panel wide">
+        <div className="m-panel-title">Evolución mensual</div>
+        <svg className="m-linechart" viewBox="0 0 300 110" aria-hidden="true">
+          <line x1="8" y1="100" x2="292" y2="100" stroke="currentColor" strokeWidth="2" />
+          <line x1="8" y1="100" x2="8" y2="6" stroke="currentColor" strokeWidth="2" />
+          <path d="M8,88 L56,74 L104,80 L152,56 L200,62 L248,34 L292,22" fill="none" stroke="#ff4d1c" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
+          <circle className="m-linedot" cx="292" cy="22" r="5" fill="#ff4d1c" stroke="#141414" strokeWidth="2" />
+        </svg>
+        <span className="m-chip ok">✓ La línea se dibuja con los datos del período elegido</span>
+      </div>
     </div>
   );
 }
@@ -132,6 +165,8 @@ function SourcesScene() {
 
 const scenes = {
   kpis: KpisScene,
+  kpisBars: KpisBarsScene,
+  trend: TrendLineScene,
   live: LiveScene,
   filters: FiltersScene,
   alerts: AlertsScene,
